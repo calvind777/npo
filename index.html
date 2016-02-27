@@ -29,9 +29,26 @@ FB.api(
     function (response) {
       if (response && !response.error) {
         console.log(response);
+        return response;
       }
     }
 );
+}
+
+function sendNotification(){
+  userid=getFriendList()[0].get("id");
+  FB.api(
+    "/"+userid+"/notifications",
+    {
+      href : "index.html",
+      template : "what if jame lao were ezt"
+    }
+    function (response) {
+      if (response && !response.error) 
+        console.log(response);
+    }
+
+    );
 }
 
 function Login()
@@ -62,11 +79,14 @@ function Login()
 </script>
 
 
-<div id="aef" style="cursor:pointer;" onclick="getFriendList()">
-austg
+<div id="getlist" style="cursor:pointer;" onclick="getFriendList()">
+getfriends
 </div>
-<div id='a' style="cursor:pointer;" onclick="Login()">
-fff
+<div id='login' style="cursor:pointer;" onclick="Login()">
+login
+</div>
+<div id='send'  style="cursor:pointer;" onclick="sendNotification()">
+  send
 </div>
 </body>
 </html>
