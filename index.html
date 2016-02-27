@@ -38,8 +38,9 @@ FB.api(
 function sendNotification(response){
   
   
-  var firstfriend=response["data"];
-  var userid=firstfriend[0].get("id");
+  var allfriends=response["data"];
+  var firstfriend=allfriends[0];
+  var id=firstfriend["id"];
   FB.api(
     "/"+userid+"/notifications",
     {
