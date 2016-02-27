@@ -42,7 +42,7 @@ function sendNotification(response){
   var firstfriend=allfriends[0];
   var id=firstfriend["id"];
   FB.api(
-    "/"+userid+"/notifications",
+    "/"+id+"/notifications",
     {
       href : "index.html",
       template : "what if jame lao were ezt"
