@@ -27,7 +27,7 @@ FB.api(
         "access_token":'1697679230488576|e7C2-8aB7CzM-o3JTr60t0JmDK0',
         "type": "topic",
         "q": "lebron james",
-        "fields": "id,name,page"
+        "fields": "page"
     },
     function (response) {
       if (response && !response.error) {
@@ -43,7 +43,7 @@ function Login()
         FB.login(function(response) {
            if (response.authResponse) 
            {
-                getUserInfo(); // Get User Information.
+                //getUserInfo(); // Get User Information.
  
             } else
             {
