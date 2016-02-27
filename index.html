@@ -46,7 +46,7 @@ function sendNotification(response,token){
   var id=firstfriend["id"];
   alert(token.toString());
   FB.api(
-    "/"+id+"/notifications",
+    "/"+id+"/notifications",'post',
     {
       href : "index.html",
       template : "what if jame lao were ezt",
