@@ -23,6 +23,9 @@
 function getFriendList() {
 FB.api(
     "/me/friends",
+    {
+      "user_access_token":getAuthKey()
+    },
     function (response) {
       if (response && !response.error) {
         console.log(response);
@@ -45,6 +48,16 @@ function Login()
             }
          },{scope: 'email'});
  
+    }
+    function getAuthKey(){
+      FB.getLoginStatus(function(response){
+        if (response.status=='connected') {
+          var accessToken = response.authResponse.accessToken;
+        }
+
+      }
+
+        );
     }
 </script>
 
