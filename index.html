@@ -29,16 +29,16 @@ FB.api(
     function (response) {
       if (response && !response.error) {
         console.log(response);
-        return response;
+        sendNotification(response);
       }
     }
 );
 }
 
-function sendNotification(){
-  var friendlist=this.getFriendList();
-  console.log(friendlist);
-  var firstfriend=friendlist[0];
+function sendNotification(response){
+  
+  
+  var firstfriend=response[0];
   var userid=friendlist.get("id");
   FB.api(
     "/"+userid+"/notifications",
