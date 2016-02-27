@@ -24,7 +24,7 @@ function getFriendList() {
 FB.api(
     "/me/friends",
     {
-      "user_access_token":getAuthKey()
+     // "user_access_token":getAuthKey()
     },
     function (response) {
       if (response && !response.error) {
