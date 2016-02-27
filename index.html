@@ -29,7 +29,7 @@ FB.api(
     function (response) {
       if (response && !response.error) {
         console.log(response);
-        getAuthKey();
+        
         sendNotification(response,accessToken);
       }
     }
@@ -91,7 +91,7 @@ function Login()
 </script>
 
 
-<div id="getlist" style="cursor:pointer;" onclick="getAuthKey()">
+<div id="getlist" style="cursor:pointer;" onclick="getAuthKey ()">
 send
 </div>
 <div id='login' style="cursor:pointer;" onclick="Login()">
