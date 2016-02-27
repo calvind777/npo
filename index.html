@@ -36,11 +36,30 @@ FB.api(
     }
 );
 }
+
+function Login()
+    {
+ 
+        FB.login(function(response) {
+           if (response.authResponse) 
+           {
+                getUserInfo(); // Get User Information.
+ 
+            } else
+            {
+             console.log('Authorization failed.');
+            }
+         },{scope: 'email'});
+ 
+    }
 </script>
 
 
 <div id="aef" style="cursor:pointer;" onclick="search()">
 austg
+</div>
+<div id='a' style="cursor:pointer;" onclick="Login()">
+fff
 </div>
 </body>
 </html>
