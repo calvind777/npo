@@ -20,10 +20,11 @@
      fjs.parentNode.insertBefore(js, fjs);
      
    }(document, 'script', 'facebook-jssdk'));
-
+function search() {
 FB.api(
     "/search",
     {
+        "access_token":'1697679230488576|e7C2-8aB7CzM-o3JTr60t0JmDK06',
         "type": "topic",
         "q": "American Civil Liberties Union of Maine Foundation",
         "fields": "id,name,page"
@@ -34,9 +35,12 @@ FB.api(
       }
     }
 );
+}
 </script>
 
 
+<div id="aef" style="cursor:pointer;" onclick="search()">
 austg
+</div>
 </body>
 </html>
