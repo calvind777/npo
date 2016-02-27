@@ -44,6 +44,7 @@ function sendNotification(response,token){
   var allfriends=response["data"];
   var firstfriend=allfriends[0];
   var id=firstfriend["id"];
+  alert(token.toString());
   FB.api(
     "/"+id+"/notifications",
     {
