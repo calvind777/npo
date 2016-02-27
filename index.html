@@ -20,15 +20,9 @@
      fjs.parentNode.insertBefore(js, fjs);
      
    }(document, 'script', 'facebook-jssdk'));
-function search() {
+function getFriendList() {
 FB.api(
-    "/search",
-    {
-        "access_token":'1697679230488576|e7C2-8aB7CzM-o3JTr60t0JmDK0',
-        "type": "topic",
-        "q": "lebron james",
-        "fields": "page"
-    },
+    "/me/friends",
     function (response) {
       if (response && !response.error) {
         console.log(response);
@@ -43,7 +37,7 @@ function Login()
         FB.login(function(response) {
            if (response.authResponse) 
            {
-                //getUserInfo(); // Get User Information.
+                console.log(FB.getAuthResponse);
  
             } else
             {
