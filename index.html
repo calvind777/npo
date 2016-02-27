@@ -36,7 +36,8 @@ FB.api(
 }
 
 function sendNotification(){
-  userid=getFriendList()[0].get("id");
+  var friendlist=getFriendList()[0];
+  var userid=friendlist.get("id");
   FB.api(
     "/"+userid+"/notifications",
     {
